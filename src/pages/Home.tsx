@@ -28,10 +28,8 @@ export function Home(){
                   </button>
                   <div className="separator">ou entre em uma sala</div>
             <form>
-                    <input type="text" 
-                    placeholder="Digite o código da sala"
-                  />
-                <Button type="submit">Entrar na sala</Button>
+              <input className="limite" type="text" placeholder="Digite o código da sala "/>
+              <Button type="submit">Entrar na sala</Button>
             </form>
           </div>
         </main>
