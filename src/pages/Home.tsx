@@ -1,3 +1,5 @@
+import { useNavigate } from 'react-router-dom';
+
 /*Importando imagens*/
 import illustrationsImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
@@ -12,6 +14,13 @@ import '../styles/auth.scss';
 
 
 export function Home(){
+
+  const history = useNavigate();
+
+  function navigateToNewPage(){
+    history('/rooms/new');
+  }
+
   return(
       <div id="page-auth">
         <aside>
@@ -22,7 +31,7 @@ export function Home(){
         <main>
           <div className='main-content'>
                   <img src={logoImg} alt="" />
-                  <button className='create-room'>
+                  <button onClick={navigateToNewPage} className='create-room'>
                   <img src={googleIconImg} alt="Logo do google" />
                     Crie sua sala com o Google
                   </button>
